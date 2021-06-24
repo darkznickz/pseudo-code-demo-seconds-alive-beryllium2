@@ -29,13 +29,19 @@ let secsInYear = secsInMonth * 12
 let secsInBirthYear = secsInMonth * (12 - monthBirth)
     console.log(secsInBirthYear)
 
+let secsInBetween = secsInYear * (currentYear - yearBirth)
+    console.log(secsInBetween)
+
 let secsCurrentYear = secsInMonth * currentMonth
     console.log(secsCurrentYear)
 
-let result = secsInBirthYear + secsCurrentYear
+let result = secsInBirthYear + secsCurrentYear + secsInBetween
     console.log(result)
 
-    document.write(result)
+    document.write(`
+            <h1>${result.toLocaleString()} seconds</h1>
+    
+    `)
 }
 
 
